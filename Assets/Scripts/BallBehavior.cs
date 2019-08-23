@@ -13,10 +13,13 @@ public class BallBehavior : MonoBehaviour
     [SerializeField]
     Vector2 launchDirection;
 
+    Rigidbody2D rb;
+
     bool launched;
 
     void Start()
     {
+        rb = GetComponent<Rigidbody2D>();
         launched = false;
         transform.position = new Vector2(paddle.position.x, paddle.position.y + offset);
     }
@@ -34,8 +37,8 @@ public class BallBehavior : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
+            rb.velocity = launchDirection;
             launched = true;
-            GetComponent<Rigidbody2D>().velocity = launchDirection;
         }
     }
 

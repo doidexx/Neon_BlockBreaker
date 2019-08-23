@@ -11,9 +11,6 @@ public class LevelManager : MonoBehaviour
     [SerializeField]
     int startScreenIndex;
 
-    [SerializeField]
-    int winScene;
-
     private void Start()
     {
         activeScene = SceneManager.GetActiveScene().buildIndex;
@@ -21,7 +18,7 @@ public class LevelManager : MonoBehaviour
         {
             FindObjectOfType<GameStatus>().DestroyScore();
         }
-        if (activeScene == winScene)
+        if (activeScene == SceneManager.sceneCountInBuildSettings - 2)
         {
             FindObjectOfType<GameStatus>().ShowFinalScore();
         }
@@ -33,7 +30,7 @@ public class LevelManager : MonoBehaviour
         {
             SceneManager.LoadScene(0);
         }
-        else if (activeScene == winScene)
+        else if (activeScene == SceneManager.sceneCountInBuildSettings - 2)
         {
             SceneManager.LoadScene(0);
         }
@@ -45,7 +42,7 @@ public class LevelManager : MonoBehaviour
 
     public void LoseScreen()
     {
-        SceneManager.LoadScene("GameOver");
+        SceneManager.LoadScene(SceneManager.sceneCountInBuildSettings - 1);
         FindObjectOfType<GameStatus>().ShowFinalScore();
     }
 }

@@ -42,6 +42,6 @@ public class BallAnimation : MonoBehaviour
 
     void LoopFix()
     {
-        GetComponent<Rigidbody2D>().velocity += new Vector2(Random.Range(0f, randomFactor), Random.Range(0f, randomFactor));
+        GetComponent<Rigidbody2D>().velocity += new Vector2(Random.Range(-randomFactor, randomFactor), Random.Range(-randomFactor, randomFactor));
     }
 }
