@@ -13,6 +13,8 @@ public class LevelManager : MonoBehaviour
 
     private void Start()
     {
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = false;
         activeScene = SceneManager.GetActiveScene().buildIndex;
         if (activeScene == startScreenIndex)
         {
