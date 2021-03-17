@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a996edc2f7cca44a8f5bf28f03815bf, type: 3}
+  m_Name: Progression
+  m_EditorClassIdentifier: 
+  basePercent: 200
+  progression:
+  - ballSpeed: 7
+    nonePercent: 120
+    unbreakablePercent: 10
+    treePercent: 10
+    twoPercent: 15
+  - ballSpeed: 7
+    nonePercent: 120
+    unbreakablePercent: 10
+    treePercent: 10
+    twoPercent: 15
+  - ballSpeed: 10
+    nonePercent: 110
+    unbreakablePercent: 15
+    treePercent: 10
+    twoPercent: 15
+  - ballSpeed: 10
+    nonePercent: 110
+    unbreakablePercent: 12
+    treePercent: 15
+    twoPercent: 20
+  - ballSpeed: 13
+    nonePercent: 100
+    unbreakablePercent: 20
+    treePercent: 15
+    twoPercent: 20
+  - ballSpeed: 13
+    nonePercent: 90
+    unbreakablePercent: 25
+    treePercent: 25
+    twoPercent: 35
+  - ballSpeed: 13
+    nonePercent: 80
+    unbreakablePercent: 30
+    treePercent: 30
+    twoPercent: 40
+  - ballSpeed: 13
+    nonePercent: 70
+    unbreakablePercent: 35
+    treePercent: 40
+    twoPercent: 45
+  - ballSpeed: 15
+    nonePercent: 60
+    unbreakablePercent: 30
+    treePercent: 40
+    twoPercent: 50
+  - ballSpeed: 15
+    nonePercent: 50
+    unbreakablePercent: 30
+    treePercent: 50
+    twoPercent: 50

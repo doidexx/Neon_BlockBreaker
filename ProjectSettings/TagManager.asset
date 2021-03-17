@@ -4,8 +4,7 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Breakable
-  - Unbreakable
+  - Block
   layers:
   - Default
   - TransparentFX
@@ -13,7 +12,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Block
   - 
   - 
   - 
@@ -42,4 +41,25 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 1657969241
+    locked: 0
+  - name: Paddle
+    uniqueID: 2697133011
+    locked: 0
+  - name: Unbreakable
+    uniqueID: 2783716763
+    locked: 0
+  - name: Tree
+    uniqueID: 2412629637
+    locked: 0
+  - name: Two
+    uniqueID: 2366123285
+    locked: 0
+  - name: One
+    uniqueID: 712638105
+    locked: 0
+  - name: Ball
+    uniqueID: 3832771433
     locked: 0

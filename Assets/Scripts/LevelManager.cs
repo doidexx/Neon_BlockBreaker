@@ -1,50 +1,41 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
-    [SerializeField] //Serialized for Debugging
-    int activeScene;
+    [SerializeField] LevelPopulator levelPopulator;
+    [SerializeField] Transform blockHolder;
+    [SerializeField] BallBehavior ball;
+    public int lvl;
+    public int score;
+    
+    private int blocksInLvl;
 
-    [SerializeField]
-    int startScreenIndex;
+    public void increaseScore(int value) => score += value;
 
-    private void Start()
+    public void IncreaseBlockAmount() => blocksInLvl++;
+
+    public void DecreaseBlockAmount() 
     {
-        Cursor.lockState = CursorLockMode.Confined;
-        Cursor.visible = false;
-        activeScene = SceneManager.GetActiveScene().buildIndex;
-        if (activeScene == startScreenIndex)
-        {
-            FindObjectOfType<GameStatus>().DestroyScore();
-        }
-        if (activeScene == SceneManager.sceneCountInBuildSettings - 2)
-        {
-            FindObjectOfType<GameStatus>().ShowFinalScore();
-        }
+        blocksInLvl--;
+        if (blocksInLvl == 0) LoadNextLevel();
     }
 
-    public void LoadNextLevel()
+    private void LoadNextLevel()
     {
-        if (activeScene + 1 >= SceneManager.sceneCountInBuildSettings)
-        {
-            SceneManager.LoadScene(0);
-        }
-        else if (activeScene == SceneManager.sceneCountInBuildSettings - 2)
-        {
-            SceneManager.LoadScene(0);
-        }
-        else
-        {
-            SceneManager.LoadScene(activeScene + 1);
-        }
+        ball.ResetBall();
+        lvl++;
+        CleanBlockGrid();
+        levelPopulator.PopulateGrid();
     }
 
-    public void LoseScreen()
+    private void CleanBlockGrid()
     {
-        SceneManager.LoadScene(SceneManager.sceneCountInBuildSettings - 1);
-        FindObjectOfType<GameStatus>().ShowFinalScore();
+        foreach (Transform block in blockHolder)
+        {
+            Destroy(block.gameObject);
+        }
     }
 }
