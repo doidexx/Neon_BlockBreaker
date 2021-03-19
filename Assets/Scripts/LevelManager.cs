@@ -8,6 +8,8 @@ public class LevelManager : MonoBehaviour
     [SerializeField] LevelPopulator levelPopulator;
     [SerializeField] Transform blockHolder;
     [SerializeField] BallBehavior ball;
+    [SerializeField] LevelProgression progression;
+
     public int lvl;
     public int score;
     
@@ -37,5 +39,11 @@ public class LevelManager : MonoBehaviour
         {
             Destroy(block.gameObject);
         }
+    }
+
+    public void LoadGameOver()
+    {
+        progression.lastScore = score;
+        SceneLoader.LoadGameOver();
     }
 }

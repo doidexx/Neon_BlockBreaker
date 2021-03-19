@@ -172,7 +172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -410,8 +410,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 187}
-  m_SizeDelta: {x: -55.8616, y: -558.5}
+  m_AnchoredPosition: {x: 0.000030517578, y: 69}
+  m_SizeDelta: {x: 0, y: -285.4028}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1208431548
 MonoBehaviour:
@@ -433,7 +433,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Neon BlockBreaker
+  m_text: 'Neon
+
+    BlockBreaker'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 349a2a406e33a8c498fbdcc6b5b74675, type: 2}
   m_sharedMaterial: {fileID: 2868203420025883153, guid: 349a2a406e33a8c498fbdcc6b5b74675,
@@ -443,7 +445,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 1741815552
+    rgba: 4291952384
   m_fontColor: {r: 0, g: 1, b: 0.81814814, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -461,12 +463,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 209.3
+  m_fontSize: 82
   m_fontSizeBase: 209.3
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 1
+  m_fontSizeMax: 200
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -610,8 +612,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000061035156, y: -358.279}
-  m_SizeDelta: {x: 0.0001, y: -805.8347}
+  m_AnchoredPosition: {x: 0.000030517578, y: -140.3522}
+  m_SizeDelta: {x: 0, y: -308.1094}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1813745077
 MonoBehaviour:
@@ -861,15 +863,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 80
+  m_fontSize: 30
   m_fontSizeBase: 80
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 30
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
+  m_VerticalAlignment: 1024
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0

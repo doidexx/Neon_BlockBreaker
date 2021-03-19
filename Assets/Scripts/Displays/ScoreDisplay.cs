@@ -9,6 +9,6 @@ public class ScoreDisplay : MonoBehaviour
 
     private void LateUpdate()
     {
-        GetComponent<TextMeshProUGUI>().text = manager.score.ToString();
+        GetComponent<TextMeshProUGUI>().text = "score: " + manager.score.ToString();
     }
 }

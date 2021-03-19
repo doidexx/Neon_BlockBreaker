@@ -5,6 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Progression", menuName = "New Progression")]
 public class LevelProgression : ScriptableObject
 {
+    public int lastScore;
     public int basePercent;
     public Progression[] progression;
     public Dictionary<int, Dictionary<BlockType, int>> progressionDic;

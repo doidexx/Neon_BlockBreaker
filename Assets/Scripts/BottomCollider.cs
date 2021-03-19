@@ -13,7 +13,7 @@ public class BottomCollider : MonoBehaviour
         display.DisableLive(ball.lives);
         if (ball.lives <= 0)
         {
-            SceneLoader.LoadGameOver();
+            FindObjectOfType<LevelManager>().LoadGameOver();
             return;
         }
         ball.ResetBall();
